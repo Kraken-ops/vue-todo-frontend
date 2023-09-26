@@ -35,6 +35,7 @@
                 dense
                 label="Search"
                 @change="viewTask"
+                autofocus
               ></v-text-field>
               <v-btn
                 class="mr-2"
@@ -67,6 +68,7 @@
       :append-icon="value ? 'mdi-plus' : ''"
       @click:append="addTask"
       @keyup.enter="addTask"
+      autofocus
     ></v-text-field>
     <div v-for="task in filterTask" :key="task.id">
       <v-list-item
